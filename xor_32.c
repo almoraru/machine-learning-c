@@ -18,7 +18,7 @@
 /*      Filename: main.c                                                      */
 /*      By: espadara <espadara@pirate.capn.gg>                                */
 /*      Created: 2025/11/24 09:00:39 by espadara                              */
-/*      Updated: 2025/11/24 09:05:52 by espadara                              */
+/*      Updated: 2025/11/24 09:08:57 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 #include <string.h>
 
 #define HIDDEN_NEURONS 64
+#define EPOCHS 100042 // The Pirate's number
 
 // --- MATRIX ENGINE ---
 typedef struct { size_t rows, cols; float *es; } Mat;
@@ -146,7 +147,7 @@ int main(void) {
     float td[][3] = {{0,0,0}, {0,1,1}, {1,0,1}, {1,1,0}};
 
     printf("Training 64-Neuron Behemoth...\n");
-    for (size_t i = 0; i < 100042; ++i) {
+    for (size_t i = 0; i < EPOCHS; ++i) {
         // Reset gradients at the start of the batch
         clear_grads(m);
 

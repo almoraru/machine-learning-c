@@ -18,7 +18,7 @@
 /*      Filename: main.c                                                      */
 /*      By: espadara <espadara@pirate.capn.gg>                                */
 /*      Created: 2025/11/24 09:00:39 by espadara                              */
-/*      Updated: 2025/11/24 09:00:46 by espadara                              */
+/*      Updated: 2025/11/24 09:05:52 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 #include <assert.h>
 #include <string.h>
 
-#define HIDDEN_NEURONS 32
+#define HIDDEN_NEURONS 64
 
 // --- MATRIX ENGINE ---
 typedef struct { size_t rows, cols; float *es; } Mat;
@@ -145,8 +145,8 @@ int main(void) {
     Xor m = xor_alloc();
     float td[][3] = {{0,0,0}, {0,1,1}, {1,0,1}, {1,1,0}};
 
-    printf("Training 32-Neuron Behemoth...\n");
-    for (size_t i = 0; i < 20000; ++i) {
+    printf("Training 64-Neuron Behemoth...\n");
+    for (size_t i = 0; i < 100042; ++i) {
         // Reset gradients at the start of the batch
         clear_grads(m);
 
@@ -158,7 +158,7 @@ int main(void) {
         if (i % 2000 == 0) printf("Cost: %f\n", MAT_AT(m.a2,0,0) - td[3][2]);
     }
 
-    printf("\n--- Results (The 32 Neurons have spoken) ---\n");
+    printf("\n--- Results (The 64 Neurons have spoken) ---\n");
     for (size_t j = 0; j < 4; ++j) {
         forward(m, td[j][0], td[j][1]);
         printf("%.0f ^ %.0f = %f\n", td[j][0], td[j][1], MAT_AT(m.a2, 0, 0));

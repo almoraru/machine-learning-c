@@ -74,7 +74,7 @@ May contain traces of pointer arithmetic and manual memory management. If you fo
 
 -----
 
-*By espadara [espadara@pirate.capn.gg](mailto:espadara@pirate.capn.gg)*
+*By espadara [espadara@pirate.capn.gg](mailto:amoraru.dev@gmail.com)*
 
 -----
 

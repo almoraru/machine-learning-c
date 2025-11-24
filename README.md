@@ -1,4 +1,4 @@
-# ☠️ Neural-C: The Unga Bunga Deep Learning Framework
+# ☠️ Neural-C: The Caveman's Learning Framework
 
 > "Libraries? Where we're going, we don't need libraries." - *Captain Espadara*
 
@@ -62,7 +62,7 @@ gcc -Wall -Wextra -O3 xor_32.c -o neural_c -lm
 
 ## 📜 The Evolution
 
-This project documents the journey from "Unga Bunga" logic to Industry Standard:
+This project documents the journey from "Caveman's" logic to Industry Standard:
 
 1.  **Level 1: The Guesser.** Randomly wiggling weights (Finite Difference).
 2.  **Level 2: The Architect.** Building a generic Matrix engine.
